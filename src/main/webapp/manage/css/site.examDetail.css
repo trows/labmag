@@ -1,0 +1,79 @@
+.examTitle {
+    font-size: 27px;
+    font-weight: 800;
+    padding-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #0AB0CD;
+}
+
+.main{
+    margin-right: 70px;
+    margin-left: 70px;
+    margin-bottom: 70px;
+}
+.mainTitle{
+    padding-left: 40px;
+    font-size: 16px;
+    color: #555555;
+}
+.dashes {
+    margin: 15px;
+    border: 1px dashed #CCCCCC;
+}
+.question {
+    margin-left: 25px;
+}
+
+.spCon {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.answerT {
+    margin-top: 12px;
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 10px;
+}
+
+.tip{
+    font-size: 16px;
+    font-weight: 600;
+    color: #0AB0CD;
+}
+
+.shortBlanks{
+    width: 35%;
+}
+
+.blanks{
+    width: 60%;
+}
+
+.answerBlanks{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #0A60CD;
+}
+.correct{
+    padding-left: 10px;
+    color: #FA0C12;
+}
+
+#submit {
+    margin-left: 25px;
+    width: 60%;
+}
+
+#gradeTip{
+    margin-left: 25px;
+}
+
+.grade{
+    font-size: 27px;
+    font-weight: 600;
+    color: #FA0C12;
+}

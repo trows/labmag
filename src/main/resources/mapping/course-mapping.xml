@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.trows.labmag.entity.Course">
+
+    <insert id="createCourse" parameterType="Course" useGeneratedKeys="true" keyProperty="course_id">
+        INSERT INTO course (course_name,course_num,course_desc,create_time) VALUES (#{course_name},#{course_num},#{course_desc},NOW())
+    </insert>
+
+    <select id="getAllCourseInfo" resultType="Course">
+        SELECT course_id,course_name,course_num,course_desc FROM course
+    </select>
+
+    <select id="getCourseByName" parameterType="String" resultType="Course">
+        SELECT course_id,course_name,course_num,course_desc FROM course WHERE course_name LIKE #{course_name}
+    </select>
+
+    <select id="getCourseById" parameterType="Integer" resultType="Course">
+        SELECT course_id,course_name,course_num,course_desc FROM course WHERE course_id = #{course_id}
+    </select>
+
+    <update id="alertCourseNum" parameterType="Course">
+        UPDATE course SET course_num = #{course_num} WHERE course_id = #{course_id}
+    </update>
+
+    <update id="updateCourse" parameterType="Course">
+        UPDATE course SET course_name = #{course_name},course_num = #{course_num},course_desc = #{course_desc}
+        WHERE course_id = #{course_id}
+    </update>
+
+    <delete id="delCourseById" parameterType="Integer">
+        DELETE FROM course WHERE course_id = #{course_id}
+    </delete>
+
+
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.trows.labmag.entity.Teacher_relation">
+
+    <insert id="curricula_variable" parameterType="Teacher_relation" useGeneratedKeys="true" keyProperty="tea_course_id">
+        INSERT IGNORE INTO teacher_relation (account_id,course_id,user_name,course_name,create_time) VALUES
+        (#{account_id},#{course_id},#{user_name},#{course_name},NOW())
+    </insert>
+
+    <select id="getTeacherRelationByAccountId" parameterType="String" resultType="Teacher_relation">
+        SELECT tea_course_id,course_id,user_name,course_name FROM teacher_relation WHERE account_id = #{account_id}
+    </select>
+
+    <delete id="dropCourse" parameterType="Integer">
+        DELETE FROM teacher_relation WHERE tea_course_id = #{tea_course_id}
+    </delete>
+
+    <select id="getInfoById" parameterType="Integer" resultType="Teacher_relation">
+        SELECT course_id,user_name FROM teacher_relation WHERE tea_course_id = #{tea_course_id}
+    </select>
+
+    <select id="getMyClass" parameterType="Teacher_relation" resultType="Teacher_relation">
+        SELECT tea_course_id,course_name FROM teacher_relation WHERE account_id = #{account_id}
+        AND course_id = #{course_id} limit 1
+    </select>
+</mapper>

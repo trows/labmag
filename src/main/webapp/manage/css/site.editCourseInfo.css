@@ -1,0 +1,36 @@
+.innerInput{
+    border: none;
+    background-color: inherit;
+    outline: medium;
+    width: 100%;
+}
+.innerTableTitle{
+    font-weight: 600;
+    background-color: #4C5F70;
+    color: #FFFFFF;
+}
+.innerTableTitle:hover{
+    cursor: default;
+}
+.innerTh:hover{
+    cursor: text;
+}
+
+.plus {
+    color: #DDDDDD;
+    margin-bottom: 20px;
+}
+
+.plus:hover {
+    cursor: pointer;
+}
+
+.myPanel{
+    border-radius:5px;
+    -moz-border-radius:5px;
+    padding-top: 0;
+    background-color: #FFFFFF;
+    padding-bottom: 12px;
+    margin: 4% 6% 20px;
+    min-width: 500px;
+}

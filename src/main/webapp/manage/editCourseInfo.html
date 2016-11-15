@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改课程信息</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assert/sweetAlert/sweetalert.css" rel="stylesheet">
+    <link href="css/site.tableBase.css" rel="stylesheet">
+    <link href="css/site.editCourseInfo.css" rel="stylesheet">
+</head>
+<body>
+<div class="myNav">
+    <div class="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="课程编号或名称...">
+      <span class="input-group-btn">
+        <button class="btn btn-default btn-search" type="button" onclick="aim()">搜索</button>
+      </span>
+        </div>
+    </div>
+    <div class="myTag">
+        <i class="block fa fa-book fa-2x"></i>
+    </div>
+    <div class="navText">
+        <span class="navTitle">
+            修改课程信息
+        </span>
+        <br>
+        <span class="navDesc">
+            &nbsp;&nbsp;管理员行为请谨慎操作
+        </span>
+    </div>
+</div>
+<hr>
+<div id="tip">
+    <div id="tipTitle">操作说明</div>
+    请首先在搜索框检索需要操作的课程名 &nbsp;&nbsp;/ &nbsp;&nbsp;或课程名 （支持关键词查询）<br>
+    例如：
+    <ul>
+        <li>120101</li>
+        <li>物理光学</li>
+    </ul>
+    注：如有需要展示所有课程信息请在搜索框输入星号键“ * ”
+</div>
+
+<table class="table table-striped table-hover table-responsive">
+
+</table>
+
+<!--模态框内容-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="myPanel ">
+
+        <h3 class="panelTitle">修改课程内容</h3>
+        <div class="panel-text">
+            <div class="input-group panel-input">
+                <span class="input-group-addon formDesc">课程名称</span>
+                <input type="text" class="form-control" placeholder="course_name">
+            </div>
+            <div class="input-group  panel-input">
+                <span class="input-group-addon formDesc">课时数量</span>
+                <input type="text" class="form-control" placeholder="num" disabled="disabled">
+            </div>
+            <div class="input-group panel-input">
+                <span class="input-group-addon formDesc">课程简介</span>
+                <textarea class="form-control" placeholder="brief introduction"></textarea>
+            </div>
+            <table class="table table-striped table-hover table-responsive table-condensed">
+
+
+                </table>
+                <div class="center plus">
+                    <i class="fa fa-plus-circle fa-2x" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="添加一个章节"
+                    onclick="plus()"></i>
+                </div>
+        </div>
+        <div class="btn-group btn-group-justified panel-button" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-success" onclick="edit()">提交修改</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-warning" onclick="abandonEdit()">放弃修改</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-danger" onclick="delThis()">删除课程</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="./js/jquery-2.2.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="../assert/sweetAlert/sweetalert.min.js"></script>
+<script src="./js/site.editCourseInfo.js"></script>
+</body>
+</html>

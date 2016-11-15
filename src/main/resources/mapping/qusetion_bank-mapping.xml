@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.trows.labmag.entity.Question_bank">
+
+    <insert id="createQuestion" parameterType="Question_bank">
+      INSERT IGNORE INTO question_bank (chapter_id,type,subject,options,answer,create_time) VALUES(#{chapter_id,jdbcType=INTEGER},
+      #{type,jdbcType=TINYINT},#{subject,jdbcType=VARCHAR},#{options,jdbcType=VARCHAR},
+      #{answer,jdbcType=VARCHAR},NOW())
+    </insert>
+
+    <select id="getPaper" parameterType="Question_bank" resultType="Question_bank">
+        SELECT question_id,chapter_id,type,subject,options FROM question_bank WHERE chapter_id = #{chapter_id} AND type = #{type}
+    </select>
+
+    <select id="getQuestion" parameterType="Integer" resultType="Question_bank">
+        SELECT question_id,chapter_id,type,subject,options,answer FROM question_bank WHERE question_id = #{question_id}
+    </select>
+
+</mapper>

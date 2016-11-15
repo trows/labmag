@@ -1,0 +1,149 @@
+body{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#divMain {
+    padding: 20px 80px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#divHead {
+    background-color: #FFFFFF;
+    min-height: 230px;
+    border: 1px solid #DDDDDD;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#divHead1 {
+
+}
+
+#divImg {
+    float: left;
+    width: 30%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+#divTitle {
+    float: right;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-right: 2%;
+    width: 64%;
+    min-height: 130px;
+}
+
+#spTitle {
+    font-size: 27px;
+    font-weight: 500;
+    color: #666666;
+}
+
+ul {
+    margin-left: -3%;
+}
+
+li {
+    color: #666666;
+}
+
+img {
+    width: 100%;
+}
+
+.col-lg-9 {
+    padding-right: 0;
+}
+
+#mainLeft {
+    background-color: #FFFFFF;
+    min-height: 300px;
+    border: 1px solid #DDDDDD;
+}
+
+#mainRight {
+    background-color: #FFFFFF;
+    min-height: 300px;
+    border: 1px solid #DDDDDD;
+}
+
+#divDir {
+    padding-left: 2%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 1px solid #DDDDDD;
+}
+
+.spDir {
+    font-size: 20px;
+    color: #444444;
+    font-weight: 600;
+}
+
+a{color:#444444}
+a:link { text-decoration: none}
+a:active { text-decoration:none}
+a:hover { text-decoration:none;color:#444444}
+a:visited { text-decoration: none}
+
+#divHourMain{
+    margin-top: 5px;
+}
+.divHour:hover
+{
+    background-color:#E2FADD;
+    cursor:pointer;
+}
+.divHour {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    /*border: 1px solid red;*/
+}
+
+.spHourTitle {
+    font-weight: 600;
+    color: #999999;
+    padding-left: 3%;
+}
+
+.spHourContent {
+    font-family: "SimSun";
+    font-weight: 500;
+    margin-left: 3%;
+    color: #444444;
+}
+
+.icon{
+    float: right;
+    margin-right: 4%;
+}
+
+.adjust{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.spRight{
+    font-size: 20px;
+    color: #444444;
+    font-weight: 600;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.downInfo{
+    margin-bottom: 10px;
+}
+.downInfo:hover{
+    background-color:#E2FADD;
+    cursor:pointer;
+}
+hr{
+    margin-top: 0;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的课程</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assert/sweetAlert/sweetalert.css" rel="stylesheet">
+    <link href="css/site.tableBase.css" rel="stylesheet">
+    <link href="../assert/dateTimePicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="./css/site.myCourse.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="myNav">
+    <div class="myTag">
+        <i class="block fa fa-book fa-2x"></i>
+    </div>
+    <div class="navText">
+        <span class="navTitle">
+            我的课程
+        </span>
+        <br>
+        <span class="navDesc">
+            &nbsp;&nbsp;提示：退选课程或班级会同步删除与此相关所有数据，请谨慎操作！
+        </span>
+    </div>
+</div>
+<hr>
+<div id="tip">
+    <div id="tipTitle">您还未选择课程</div>
+    请首先点击&nbsp;<i class="fa  fa-plus-circle fa-1x plus"></i>&nbsp;按钮开始选课操作，并在搜索框检索需要操作的课程编号 &nbsp;&nbsp;/ &nbsp;&nbsp;或课程名
+    （支持关键词查询）<br>
+    例如：
+    <ul>
+        &nbsp;120101<br>
+        &nbsp;物理光学
+    </ul>
+    注：如有需要展示所有课程信息请在搜索框输入星号键“ * ”
+</div>
+<div id="myCourse">
+    <div class="navTitle myCourseTitle">
+        <!--已选课程：-->
+    </div>
+    <div class="row adjust">
+
+
+    </div>
+</div>
+
+<div id="showAllClass">
+    <i class="fa  fa-plus-circle fa-3x plus" data-toggle="tooltip" data-placement="right"
+       title="选课" onclick="search()"></i>
+</div>
+<div class="input-group" id="searchDiv">
+    <input type="text" class="form-control" id="searchInput" placeholder="课程搜索...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="aim()">搜索</button>
+      </span>
+</div>
+<hr>
+<div class="navTitle myCourseTitle">
+
+</div>
+<table class="table table-striped table-hover table-responsive table-condensed">
+
+</table>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="myPanel modalPanel">
+        <h3 class="panelTitle">授课信息</h3>
+        <div id="tip2">
+            <div id="tipTitle2">您还未选择课程</div>
+            绑定班级操作操作步骤:
+            <ul><div id="tipStep">
+                &nbsp;1.在搜索框输入要绑定的班级，并点击“搜索”按钮<br>
+                &nbsp;2.班级选择成功后，请选择课程开始与结束时间<br>
+                &nbsp;3.点击绿色“添加授课班级”按钮完成绑定操作
+            </div>
+            </ul>
+        </div>
+        <div class="panel-text">
+            <div class="navTitle myCourseTitle">
+                <!--已选班级-->
+            </div>
+            <table class="table table-striped table-hover table-responsive table-condensed">
+
+            </table>
+            <hr>
+
+            <div class="input-group">
+                <input id="innerSearch" type="text" class="form-control" placeholder="班级（班级简称...  例：科技1202）">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button" onclick="innerSearch()">搜索</button>
+                </span>
+            </div><!-- /input-group -->
+            <hr>
+            <div>
+                <div class="dropdown inner">
+                    <div class="drop">未选择班级</div>
+                </div>
+                <span>/</span>
+                <div class="dropdown inner" >
+                    <div class="drop" onclick=pickDate1(this)>授课开始时间</div>
+                </div>
+                <span>-</span>
+                <div class="dropdown inner" >
+                    <div class="drop" onclick=pickDate2(this)>授课结束时间</div>
+                </div>
+                <div class="dropdown inner">
+                    <div class="drop">
+                        <button class="btn btn-success" onclick="newClass()">添加授课班级</button>
+                    </div>
+                </div>
+            </div>
+            <div id="datetimepicker1"></div>
+            <input type="text" id="mirror_field1" readonly hidden>
+            <div id="datetimepicker2"></div>
+            <input type="text" id="mirror_field2" readonly hidden>
+        </div>
+        <hr>
+        <div id="closeButton"><i class="fa fa-power-off fa-3x powerOff" onclick="abandon()" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery-2.2.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="../assert/sweetAlert/sweetalert.min.js"></script>
+<script src="../assert/dateTimePicker/bootstrap-datetimepicker.min.js"></script>
+<script src="../assert/dateTimePicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="./js/site.myCourse.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.trows.labmag.entity.Report">
+
+    <select id="isContain" parameterType="Report" resultType="Report">
+        SELECT create_time FROM report WHERE chapter_id = #{chapter_id} AND account_id = #{account_id}
+    </select>
+
+    <insert id="setReport" parameterType="Report">
+        INSERT INTO report (chapter_id,account_id,study,advice,data,chart,create_time) VALUES
+        (#{chapter_id,jdbcType=INTEGER},#{account_id,jdbcType=VARCHAR},#{study,jdbcType=VARCHAR},#{advice,jdbcType=VARCHAR},
+        #{data,jdbcType=VARCHAR},#{chart,jdbcType=VARCHAR},NOW())
+    </insert>
+
+    <select id="getExistReport" parameterType="Report" resultType="Report">
+        SELECT * FROM report WHERE chapter_id = #{chapter_id} AND account_id = #{account_id}
+    </select>
+
+    <update id="setGrade" parameterType="Report">
+        UPDATE IGNORE report SET grade = #{grade} WHERE chapter_id = #{chapter_id} AND account_id = #{account_id}
+    </update>
+</mapper>

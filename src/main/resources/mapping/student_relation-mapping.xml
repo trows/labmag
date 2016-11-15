@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.trows.labmag.entity.Student_relation">
+
+   <insert id="setChapterHour" parameterType="Student_relation">
+       INSERT IGNORE INTO student_relation (course_id,account_id,hour,course_name,chapter_id,create_time)
+       VALUES (#{course_id},#{account_id},#{hour},#{course_name},#{chapter_id},NOW())
+   </insert>
+
+    <select id="getHour" parameterType="Student_relation" resultType="Integer">
+        SELECT hour FROM student_relation WHERE account_id = #{account_id} AND chapter_id = #{chapter_id}
+    </select>
+
+    <update id="setExamState" parameterType="Student_relation">
+        UPDATE IGNORE student_relation SET exam_state = #{exam_state} WHERE account_id = #{account_id} AND chapter_id = #{chapter_id}
+    </update>
+
+    <update id="setReportState" parameterType="Student_relation">
+        UPDATE IGNORE student_relation SET report_state = #{report_state} WHERE account_id = #{account_id} AND chapter_id = #{chapter_id}
+    </update>
+
+    <select id="getStuHourInfo" parameterType="Student_relation" resultType="Student_relation">
+        SELECT chapter_id,exam_state,report_state FROM student_relation WHERE course_id = #{course_id} AND account_id = #{account_id}
+         AND hour = #{hour}
+    </select>
+
+</mapper>

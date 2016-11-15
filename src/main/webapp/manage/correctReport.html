@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>批改预习测试</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/site.tableBase.css" rel="stylesheet">
+    <link href="../assert/sweetAlert/sweetalert.css" rel="stylesheet">
+</head>
+<body>
+<div class="myNav">
+    <div class="myTag">
+        <i class="block fa fa-desktop fa-2x"></i>
+    </div>
+    <div class="navText">
+        <span class="navTitle">
+            批改实验报告
+        </span>
+        <br>
+        <span class="navDesc">
+            &nbsp;&nbsp;请首先选择需要操作的班级与实验课时
+        </span>
+    </div>
+</div>
+<div class="dropdown inner">
+    <div class="drop" id="class_name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        选择班级<span class="caret"></span>
+    </div>
+    <ul class="dropdown-menu" aria-labelledby="class_name">
+    </ul>
+</div>
+<span>/</span>
+<div class="dropdown inner">
+    <div class="drop" id="hour" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        选择课时<span class="caret"></span>
+    </div>
+    <ul class="dropdown-menu" aria-labelledby="hour">
+    </ul>
+</div>
+<span>/</span>
+<div class="dropdown inner">
+    <div class="drop" id="flag" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        全部<span class="caret"></span>
+    </div>
+    <ul class="dropdown-menu" aria-labelledby="flag">
+        <li><a onclick="setFlag(this)">全部</a></li>
+        <li><a onclick="setFlag(this)">已批改</a></li>
+        <li><a onclick="setFlag(this)">未批改</a></li>
+        <li><a onclick="setFlag(this)">未提交</a></li>
+    </ul>
+</div>
+<hr>
+<table class="table table-striped table-hover table-responsive">
+</table>
+
+<form method="post" id="getForm" action="../toReport.htm">
+    <input type="hidden" name="chapterList" id="chapterList">
+    <input type="hidden" name="list" id="list">
+    <input type="hidden" name="index" id="index">
+</form>
+<script src="./js/jquery-2.2.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="../assert/sweetAlert/sweetalert.min.js"></script>
+<script src="./js/site.correctReport.js"></script>
+</body>
+</html>

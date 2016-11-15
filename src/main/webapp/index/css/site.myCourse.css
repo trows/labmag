@@ -1,0 +1,35 @@
+body {
+    padding-top: 40px;
+}
+
+
+.footer-bottom ul > li {
+    padding: 0;
+}
+.footer-bottom ul > li + li::before {
+    color: #ccc;
+    content: "|";
+    padding: 0 10px;
+}
+
+.footer a {
+    color: #777;
+}
+
+#divFooter{
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+.course_title{
+    color: #337AB7;
+    font-weight: 600;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.min-height{
+    min-height: 500px;
+}

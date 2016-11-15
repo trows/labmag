@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="com.trows.labmag.entity.Account" alias="Account"/>
+        <typeAlias type="com.trows.labmag.entity.Chapter" alias="Chapter"/>
+        <typeAlias type="com.trows.labmag.entity.Course" alias="Course"/>
+        <typeAlias type="com.trows.labmag.entity.Papers" alias="Papers"/>
+        <typeAlias type="com.trows.labmag.entity.Question_bank" alias="Question_bank"/>
+        <typeAlias type="com.trows.labmag.entity.Report" alias="Report"/>
+        <typeAlias type="com.trows.labmag.entity.Student_relation" alias="Student_relation"/>
+        <typeAlias type="com.trows.labmag.entity.Teacher_relation" alias="Teacher_relation"/>
+        <typeAlias type="com.trows.labmag.entity.Course_class" alias="Course_class"/>
+    </typeAliases>
+</configuration>

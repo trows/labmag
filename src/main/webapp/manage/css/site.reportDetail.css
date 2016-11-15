@@ -1,0 +1,87 @@
+.reportTitle {
+    font-size: 27px;
+    font-weight: 800;
+    padding-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #0AB0CD;
+}
+
+.main{
+    margin-right: 70px;
+    margin-left: 70px;
+    margin-bottom: 70px;
+}
+.mainTitle{
+    padding-left: 40px;
+    font-size: 16px;
+    color: #555555;
+}
+.dashes {
+    margin: 15px;
+    border: 1px dashed #CCCCCC;
+}
+.question {
+    margin-left: 25px;
+}
+
+.spCon {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.answerT {
+    margin-top: 12px;
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #DDDDDD;
+
+}
+
+#submit {
+    margin-left: 25px;
+    width: 60%;
+}
+
+#gradeTip{
+    margin-left: 25px;
+}
+
+.grade{
+    font-size: 27px;
+    font-weight: 600;
+    color: #FA0C12;
+}
+
+.panelBodyTitle {
+    color: inherit;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.yAxis {
+    float: left;
+    font-size: 10px;
+    font-weight: 600;
+    color: #7E7E7E;
+}
+
+.xAxis {
+    float: right;
+    font-size: 10px;
+    font-weight: 600;
+    margin-right: 0;
+    color: #7E7E7E;
+}
+
+.unit {
+    width: 100px;
+    margin-right: 20px;
+}
+.area{
+    min-height:400px;
+}
+.myPanelBody {
+    text-align: center;
+}
+

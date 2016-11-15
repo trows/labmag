@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.trows.labmag.entity.Chapter">
+
+   <insert id="createChapter" parameterType="Chapter">
+        INSERT INTO chapter (course_id,chapter_name,amount,score,create_time) VALUES (#{course_id},#{chapter_name},
+        #{amount},#{score},NOW())
+   </insert>
+
+    <select id="getChaptersByCourseId" parameterType="Integer" resultType="Chapter">
+        SELECT chapter_id,chapter_name,amount,score FROM chapter WHERE course_id = #{course_id}
+    </select>
+
+    <delete id="delChapterById" parameterType="Integer">
+        DELETE FROM chapter WHERE chapter_id = #{chapter_id}
+    </delete>
+
+    <update id="updateChapter" parameterType="Chapter">
+        UPDATE chapter SET chapter_name = #{chapter_name},amount = #{amount},score = #{score} WHERE chapter_id = #{chapter_id}
+    </update>
+
+    <select id="getChaptersPartInfoByCourseId" parameterType="Integer" resultType="Chapter">
+        SELECT chapter_id,chapter_name FROM chapter WHERE course_id = #{course_id}
+    </select>
+
+    <select id="getChapterById" parameterType="Integer" resultType="Chapter">
+        SELECT chapter_id,chapter_name,amount,score FROM chapter WHERE chapter_id = #{chapter_id}
+    </select>
+</mapper>

@@ -1,0 +1,147 @@
+body {
+    background-color: #F5F5F5;
+    width: 100%;
+}
+
+.adjust {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.myNav {
+    padding-bottom: 20px;
+    min-height: 45px;
+}
+
+.myTag {
+    /*border:2px solid;*/
+    float: left;
+    border-radius: 5px;
+    -moz-border-radius: 5px; /* Old Firefox */
+    height: 55px;
+    width: 55px;
+    background-color: #4C5F70;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 14px;
+}
+
+.navText {
+    margin-left: 70px;
+    margin-top: 8px;
+}
+
+.navTitle {
+    color: #666666;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navDesc {
+    color: #AAAAAA;
+    font-size: 8px;
+}
+
+.inner {
+    display: inline;
+}
+
+.inner:hover {
+    cursor: pointer;
+    color: #333333;
+}
+
+.drop {
+    display: inline;
+    margin: 10px;
+    color: #666666;
+    font-weight: 600;
+    /*background-color:#4C5F70 ;*/
+}
+
+.declare {
+    color: #666666;
+}
+
+.declare-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.innerImg {
+    border-radius: 5px;
+    -moz-border-radius: 5px; /* Old Firefox */
+    text-align: center;
+    width: 180px;
+    margin-left: 17%;
+    height: 291px;
+    padding-top: 60px;
+    /*background-color:#FFFFFF ;*/
+    border: dashed 2px #CCCCCC;
+}
+
+.innerImg:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+.innerImg:active {
+    background-color: #F5F5F5;;
+}
+
+.center {
+    text-align: center;
+}
+
+.fileName {
+    margin-top: 40px;
+    color: #97A1A8;
+    font-weight: 600;
+}
+
+.fileDesc {
+    margin-top: 30px;
+    color: #97A1A8;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.loadImg {
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+.loadImg:hover {
+    cursor: pointer;
+}
+
+.loadImg:active {
+    color: #4C5F70;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+a:link {
+    text-decoration: none;
+    color: #333333;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #333333;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333333;
+}
+
+a:active {
+
+    text-decoration: none;
+    color: #666666;
+}

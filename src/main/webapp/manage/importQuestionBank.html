@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导入题库</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/site.importBase.css" rel="stylesheet">
+    <link href="../assert/sweetAlert/sweetalert.css" rel="stylesheet">
+    <link href="../assert/webuploader/webuploader.css" rel="stylesheet">
+    <link href="../assert/webuploader/css/site.upload.css" rel="stylesheet">
+</head>
+<body>
+<div class="myNav">
+    <div class="myTag">
+        <i class="fa fa-upload fa-2x"></i>
+    </div>
+    <div class="navText">
+        <span class="navTitle">
+            导入题库
+        </span>
+        <br>
+        <span class="navDesc">
+            &nbsp;&nbsp;为保证成功率，建议使用标准样式Excel表格
+        </span>
+    </div>
+</div>
+<div class="dropdown inner">
+    <div class="drop" id="dLabel0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        导入题库
+        <span class="caret"></span>
+    </div>
+    <ul class="dropdown-menu" aria-labelledby="dLabel0">
+        <li><a href="./importTeachersInfo.html" target="myFrame">导入教师信息</a></li>
+        <li><a href="./importStudentInfo.html" target="myFrame">导入学生信息</a></li>
+        <li><a href="./importCourse.html" target="myFrame">导入课程</a></li>
+    </ul>
+</div>
+<hr>
+<div class="row adjust">
+    <div class="col-md-3">
+        <div class="declare">
+            <p class="declare-title">操作说明</p>
+            <p>1. 在当前页下载标准格式表格</p>
+            <p>2. 在对应excel表中写入具体内容</p>
+            <p>3. 在当前页面导入表格</p>
+            <p>4. 点击&nbsp;"<i class="fa fa-upload"></i>"&nbsp;按钮上传，完成导入操作</p>
+        </div>
+    </div>
+    <div id="uploader" class="col-md-3 center">
+        <div class="innerImg" id="picker" data="4">
+            <i class="fa fa-file-excel-o fa-5x"></i>
+            <div class="fileName"><p id="siteUpload">未选择文件</p></div>
+            <div id="thelist" class="fileDesc">Click on this box</div>
+        </div>
+        <div id="ctlBtn" class="loadImg">
+            <i class="fa fa-upload fa-2x"></i>
+        </div>
+
+    </div>
+    <div class="col-md-3 center">
+        <a href="../file/template/template_question_info.xlsx">
+            <div class="innerImg">
+                <i class="fa fa-file-excel-o fa-5x"></i>
+                <div class="fileName">题库信息样式表.xlsx</div>
+                <div class="fileDesc">Click on this box</div>
+            </div>
+        </a>
+        <div class="loadImg">
+            <a href="../file/template/template_question_info.xlsx">
+                <i class="fa fa-download fa-2x"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <!--<div class="col-md-3">-->
+    <!--</div>-->
+</div>
+
+
+<div id="bar">
+
+</div>
+<script src="./js/jquery-2.2.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="../assert/sweetAlert/sweetalert.min.js"></script>
+<script src="../assert/webuploader/webuploader.nolog.min.js"></script>
+<script src="../assert/webuploader/js/site.upload.js"></script>
+</body>
+</html>

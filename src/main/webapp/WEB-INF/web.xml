@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <!-- Servlet Filters ================================================ -->
+
+  <!--
+    - Declare a filter for multipart MIME handling
+    -->
+  <display-name>labmag</display-name>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath*:config/spring.xml,classpath*:config/spring-mybatis.xml</param-value>
+  </context-param>
+  <filter>
+    <description>字符集过滤器</description>
+    <display-name>encodingFilter</display-name>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+
+    <init-param>
+      <description>字符集编码</description>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+
+  <!--
+    - Declare a filter for debugging incoming request
+    -->
+
+
+  <!-- Filter mappings ================================================ -->
+
+  <!--
+    - Use the Cocoon multipart filter together with the Cocoon demo webapp
+    -->
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!--
+    - Use the Cocoon debug filter together with the Cocoon demo webapp
+  <filter-mapping>
+    <filter-name>CocoonDebugFilter</filter-name>
+    <servlet-name>Cocoon</servlet-name>
+  </filter-mapping>
+    -->
+
+  <!-- Servlet Context Listener ======================================= -->
+
+  <!--
+    - Declare Spring context listener which sets up the Spring Application Context
+    - containing all Cocoon components (and user defined beans as well).
+    -->
+  <listener>
+    <description>spring监听器</description>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <!--
+    - Declare Spring request listener which sets up the required RequestAttributes
+    - to support Springs and Cocoon custom bean scopes like the request scope or the
+    - session scope.
+    -->
+  <listener>
+    <description>并不知道干嘛用的</description>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+
+  <listener>
+    <description>防止spring内存溢出</description>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+
+  <!-- Servlet Configuration ========================================== -->
+
+  <!--
+    - Servlet that dispatches requests to the Spring managed block servlets
+    -->
+  <servlet>
+    <description>springMVC servlet dispatcher</description>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <description>SpringMVC配置文件</description>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath*:config/spring-mvc.xml</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>*.htm</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>/index/index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!--<error-page>-->
+    <!--<error-code>404</error-code>-->
+    <!--<location>/index/error.html</location>-->
+  <!--</error-page>-->
+  <!--<error-page>-->
+    <!--<error-code>500</error-code>-->
+    <!--<location>/index/error.html</location>-->
+  <!--</error-page>-->
+  <!-- 配置session超时时间，单位分钟 -->
+  <session-config>
+    <session-timeout>15</session-timeout>
+  </session-config>
+</web-app>

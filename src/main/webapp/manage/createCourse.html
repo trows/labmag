@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建课程</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assert/sweetAlert/sweetalert.css" rel="stylesheet">
+    <link href="css/site.tableBase.css" rel="stylesheet">
+    <link href="css/site.createCourse.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="myNav">
+    <div class="myTag">
+        <i class="block fa fa-book fa-2x"></i>
+    </div>
+    <div class="navText">
+        <span class="navTitle">
+            创建课程
+        </span>
+        <br>
+        <span class="navDesc">
+            &nbsp;&nbsp;管理员行为请谨慎操作
+        </span>
+    </div>
+</div>
+<hr>
+
+<div class="row adjust">
+    <div class="col-md-3">
+        <div class="declare">
+            <p class="declare-title">操作说明</p>
+            <p>1. 请按照要求键入课程名称，课时数量，课程简介</p>
+            <p>2. 在课时详情表格中键入实验名称，测试题量</p>
+            <p>3. 测试题量填写格式如下：</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单选题;填空题;简答题</p>
+            <p>例：10;8;2 表示10道单选，8道填空，2道简答。(注：";"为英文输入分号)</p>
+            <p>4. 分值分配填写格式如下：</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单选题;填空题;简答题</p>
+            <p>例：60;20;20 表示单选60分，填空20分，简答20分。(注：";"为英文输入分号)</p>
+            <p>5. 完成所有项目填写请点击 "<strong>创建课程</strong>" 按钮，系统将自动完成输入校验工作，校验成功操作完成。如失败，请检查输入格式是否有误。并重新提交</p>
+            <p>6. 本操作为创建单个课程，系统提供<strong><a href="./importCourse.html" target="myFrame">批量导入课程</a></strong>，
+                <strong><a href="./importQuestionBank.html" target="myFrame">批量导入题库</a></strong>功能</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <br>
+        <div class="input-group panel-input">
+            <span class="input-group-addon formDesc backColor">课程名称</span>
+            <input type="text" class="form-control" placeholder="例：光学实验">
+        </div>
+        <div class="input-group  panel-input">
+            <span class="input-group-addon formDesc backColor">课时数量</span>
+            <input type="text" class="form-control " placeholder="例：4 (不应大于100)" value="4" onblur="alterTable(this.value)">
+        </div>
+        <div class="input-group  panel-input">
+            <span class="input-group-addon formDesc backColor">课程简介</span>
+            <textarea type="text" class="form-control" placeholder="不超过30个字" maxlength="30"></textarea>
+        </div>
+        <table class="table table-striped table-hover table-responsive table-condensed">
+            <tr>
+                <th class="innerTableTitle">实验名称</th>
+                <th class="innerTableTitle">测试题量</th>
+                <th class="innerTableTitle">分数分配</th>
+            </tr>
+            <tr>
+                <th><input type="text" class="innerInput" placeholder="例：光传输测量"></th>
+                <th><input type="text" class="innerInput" placeholder="例：10;8;2" onblur="checkInputNum(this)" onclick=changeColor(this)></th>
+                <th><input type="text" class="innerInput" placeholder="例：60;20;20" onblur="checkInputNum(this)" onclick=changeColor(this)></th>
+            </tr>
+            <tr>
+                <th><input type="text" class="innerInput" ></th>
+                <th><input type="text" class="innerInput" onblur="checkInputNum(this)" onclick=changeColor(this)></th>
+                <th><input type="text" class="innerInput" onblur="checkInputNum(this)" onclick=changeColor(this)></th>
+            </tr>
+            <tr>
+                <th><input type="text" class="innerInput" ></th>
+                <th><input type="text" class="innerInput" onblur="checkInputNum(this)" onclick=changeColor(this)></th>
+                <th><input type="text" class="innerInput" onblur="checkInputNum(this)" onclick=changeColor(this)></th>
+            </tr>
+            <tr>
+                <th><input type="text" class="innerInput" ></th>
+                <th><input type="text" class="innerInput" onblur="checkInputNum(this)" onclick=changeColor(this)></th>
+                <th><input type="text" class="innerInput" onblur="checkInputNum(this)" onclick=changeColor(this)></th>
+            </tr>
+        </table>
+        <div class="btnDiv">
+            <button class="btn myButton" onclick="createCourse()">创建课程</button>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery-2.2.3.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="../assert/sweetAlert/sweetalert.min.js"></script>
+<script src="./js/site.createCourse.js"></script>
+</body>
+</html>

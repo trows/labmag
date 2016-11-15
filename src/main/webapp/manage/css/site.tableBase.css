@@ -1,0 +1,176 @@
+body{
+    background-color: #F5F5F5;
+}
+
+.myNav{
+    padding-bottom: 20px;
+    min-height: 45px;
+}
+.myTag{
+    /*border:2px solid;*/
+    float: left;
+    border-radius:5px;
+    -moz-border-radius:5px; /* Old Firefox */
+    height: 55px;
+    width: 55px;
+    background-color: #4C5F70;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 14px;
+}
+
+.navText{
+   margin-left: 70px;
+    margin-top: 8px;
+}
+
+.navTitle{
+    color: #666666;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navDesc{
+    color: #AAAAAA;
+    font-size: 8px;
+}
+.inner{
+    display: inline;
+}
+.inner:hover{
+    cursor: pointer;
+    color: #333333;
+}
+.drop{
+    display: inline;
+    margin: 10px;
+    color: #666666;
+    font-weight: 600;
+    /*background-color:#4C5F70 ;*/
+}
+
+
+.tableTitle{
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #4C5F70;
+    color: #FFFFFF;
+    /*border: solid 1px #DDDDDD;*/
+}
+
+th{
+    border: solid 1px #DDDDDD;
+}
+
+tr:hover{
+   cursor: pointer;
+}
+.tableTitle:hover{
+    cursor: default;
+}
+
+.myPagination{
+    text-align: center;
+    margin-bottom: 0;
+}
+a:link { text-decoration: none}
+a:active { text-decoration:none}
+a:hover { cursor: pointer;}
+a:visited { text-decoration: none}
+
+.search{
+    width: 20%;
+    float: right;
+}
+
+.btn-search {
+    background-color: #E6E6E6;
+}
+
+#myButton{
+    width: 100%;
+    text-align: center;
+}
+
+.panelTitle{
+    border-radius:4px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #4C5F70;
+    height: 45px;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 12px;
+    margin-bottom: 25px;
+}
+
+.myPanel{
+    border-radius:5px;
+    -moz-border-radius:5px;
+    padding-top: 0;
+    background-color: #FFFFFF;
+    padding-bottom: 12px;
+    margin: 4% 20% 20px;
+    min-width: 500px;
+}
+
+.panel-text{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.panel-button{
+    text-align: center;
+    width: 50%;
+    font-weight: 600;
+    margin: auto auto 10px;
+}
+
+.panel-input{
+    margin-bottom: 15px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+}
+
+.formDesc{
+    /*display: inline;*/
+    border: none;
+    background-color: #FFFFFF;
+    color: #666666;
+    padding-right: 30px;
+    font-weight: 600;
+}
+
+
+.btn{
+    font-weight: 600;
+}
+
+.adjust{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+#tip{
+    background-color: #EDEEF1;
+    margin-top: 10px;
+    padding: 16px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666666;
+}
+
+#tipTitle{
+    font-size: 17px;
+    color: #E36159;
+    font-weight: 600;
+}
+ul{
+    padding-left: -8px;
+    margin-left: -5px;
+}
+
+.center{
+    text-align: center;
+}

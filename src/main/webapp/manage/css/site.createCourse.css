@@ -1,0 +1,50 @@
+.backColor{
+    background-color: #F5F5F5;
+}
+
+
+.declare{
+    color: #666666;
+}
+.declare-title{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.innerInput{
+    border: none;
+    background-color: inherit;
+    outline: medium;
+    width: 100%;
+}
+.innerTableTitle{
+    font-weight: 600;
+    background-color: #4C5F70;
+    color: #FFFFFF;
+}
+.innerTableTitle:hover{
+    cursor: default;
+}
+tr:hover{
+    cursor: text;
+}
+
+.myButton{
+
+    background-color: #4C5F70;
+    color: #FFFFFF;
+    margin-right: auto;
+    margin-left: auto;
+}
+.myButton:active{
+    border: none;
+    color: #FFFFFF;
+}
+
+.myButton:hover{
+    color: #FFFFFF;
+}
+
+.btnDiv{
+    text-align: center;
+}

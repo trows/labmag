@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.trows.labmag.entity.Course_class">
+
+    <insert id="bindingClass" parameterType="Course_class">
+        INSERT IGNORE INTO course_class (class_name,tea_course_id,start_time,end_time,create_time) VALUES
+        (#{class_name},#{tea_course_id},#{start_time},#{end_time},NOW())
+    </insert>
+
+    <select id="getBindClass" parameterType="Integer" resultType="Course_class">
+        SELECT * FROM course_class WHERE tea_course_id = #{tea_course_id}
+    </select>
+
+    <delete id="unwarp" parameterType="Course_class">
+        DELETE FROM course_class WHERE class_name = #{class_name} AND tea_course_id = #{tea_course_id}
+    </delete>
+
+    <select id="getTea_course_idByClassName" parameterType="String" resultType="Course_class">
+        SELECT tea_course_id FROM course_class WHERE class_name = #{class_name}
+    </select>
+</mapper>

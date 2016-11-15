@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.trows.labmag.entity.Papers">
+
+    <select id="isContain" parameterType="Papers" resultType="Papers">
+        SELECT create_time FROM papers WHERE chapter_id = #{chapter_id} AND account_id = #{account_id}
+    </select>
+
+    <insert id="submitPaper" parameterType="Papers">
+        INSERT IGNORE INTO papers (chapter_id,account_id,question_list,create_time) VALUES
+        (#{chapter_id},#{account_id},#{question_list},NOW());
+    </insert>
+
+    <select id="getExistPaper" parameterType="Papers" resultType="Papers">
+        SELECT * FROM papers WHERE chapter_id = #{chapter_id} AND account_id = #{account_id}
+    </select>
+
+    <update id="setGrade" parameterType="Papers">
+        UPDATE IGNORE papers SET grade = #{grade},adjust = #{adjust} WHERE chapter_id = #{chapter_id} AND account_id = #{account_id}
+    </update>
+</mapper>
